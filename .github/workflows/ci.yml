@@ -1,21 +1,18 @@
 name: CI
 
-
 on:
-push:
-branches: [ master ]
-pull_request:
-branches: [ mster ]
-
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
-hola-desde-actions:
-name: Mensaje Hola
-runs-on: ubuntu-latest
-steps:
-- name: Checkout
-uses: actions/checkout@v4
+  hola-desde-actions:
+    name: Mensaje Hola
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-
-- name: Imprimir mensaje
-run: echo "Hola desde GitHub Actions"
+      - name: Imprimir mensaje
+        run: echo "Hola desde GitHub Actions"
